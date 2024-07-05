@@ -33,7 +33,7 @@ function App() {
 				<section id='examples'></section>
 				<h2>Examples</h2>
 				<menu>
-					<TabButton/>
+					<TabButton></TabButton>
 				</menu>
 			</main>
 		</div>
