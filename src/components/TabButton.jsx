@@ -1,9 +1,11 @@
+export default function TabButton({children,onSelect}) {
+	// document.querySelector('button').addEventListener('click',()=>{ })
 
+	
 
-export default function TabButton({children}) {
 	return (
 		<li>
-			<button>{children}</button>
+			<button onClick={onSelect}>{children}</button>
 		</li>
 	);
 }
