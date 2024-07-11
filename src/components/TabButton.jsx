@@ -1,7 +1,7 @@
 export default function TabButton({children,onSelect}) {
 	// document.querySelector('button').addEventListener('click',()=>{ })
 
-	
+		console.log('APP COMPONENT EXECUTING')
 
 	return (
 		<li>
