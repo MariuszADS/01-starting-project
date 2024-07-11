@@ -3,11 +3,19 @@ import Header from './components/Header/Header.jsx';
 import { CORE_CONCEPTS } from './data';
 import CoreConcept from './components/CoreConcept'
 import TabButton from './components/TabButton.jsx';
-import handleClick from './handleClick.jsx';
+// import handleClick from './handleClick.jsx';
 
 
 function App() {
 	
+	let tabContent = 'Please click a button'
+function handleClick(selectedButton){
+tabContent = selectedButton
+    console.log(tabContent)
+}
+	
+console.log('APP COMPONENT EXECUTING')
+
 	return (
 		<div>
 			<Header />
@@ -39,7 +47,7 @@ function App() {
 					<TabButton onSelect={() => handleClick('props')}>Props</TabButton>
 					<TabButton onSelect={() => handleClick('state')}>State</TabButton>
 				</menu>
-				Dynamic Contenet
+				{tabContent}
 				</section>
 			</main>
 		</div>
