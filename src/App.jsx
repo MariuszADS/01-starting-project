@@ -26,9 +26,9 @@ function App() {
 				<section id='core-concepts'>
 					<h2>Core concepts</h2>
 					<ul>
-						{CORE_CONCEPTS.map((itemConcept)=> <CoreConcept key ={itemConcept.title} {...itemConcept}/>)}
+						{/* {CORE_CONCEPTS.map((itemConcept)=> <CoreConcept key ={itemConcept.title} {...itemConcept}/>)} */}
 
-						{/* <CoreConcept
+						<CoreConcept
 							title='Components'
 							description='The core UI builgind blocks.'
 							image={componentsImg}
@@ -40,18 +40,29 @@ function App() {
 						/>
 
 						<CoreConcept {...CORE_CONCEPTS[2]} />
-						<CoreConcept {...CORE_CONCEPTS[3]} /> */}
+						<CoreConcept {...CORE_CONCEPTS[3]} />
 					</ul>
 				</section>
 				<section id='examples'>
 					<h2>Examples</h2>
 					<menu>
-						<TabButton isSelected={selectedTopic === 'components'} onSelect={() => handleClick('components')}
-						>Components</TabButton>
-						<TabButton isSelected={selectedTopic === 'jsx'} onSelect={() => handleClick('jsx')}
-						>JSX</TabButton>
-						<TabButton isSelected={selectedTopic === 'props'} onSelect={() => handleClick('props')}>Props</TabButton>
-						<TabButton isSelected={selectedTopic === 'state'} onSelect={() => handleClick('state')}>State</TabButton>
+						<TabButton
+							isSelected={selectedTopic === 'components'}onSelect={() => handleClick('components')}>Components</TabButton>
+						<TabButton
+							isSelected={selectedTopic === 'jsx'}
+							onSelect={() => handleClick('jsx')}>
+							JSX
+						</TabButton>
+						<TabButton
+							isSelected={selectedTopic === 'props'}
+							onSelect={() => handleClick('props')}>
+							Props
+						</TabButton>
+						<TabButton
+							isSelected={selectedTopic === 'state'}
+							onSelect={() => handleClick('state')}>
+							State
+						</TabButton>
 					</menu>
 
 					{!selectedTopic ? <p>Please select a topic.</p> : null}
